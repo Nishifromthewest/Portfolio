@@ -4,13 +4,13 @@
   functions = "netlify/functions"
 
 [[redirects]]
-  from = "/*"
-  to = "/HTML/index.html"
+  from = "/success"
+  to = "/HTML/success.html"
   status = 200
 
 [[redirects]]
-  from = "/success"
-  to = "/HTML/success.html"
+  from = "/*"
+  to = "/HTML/index.html"
   status = 200
 
 [build.environment]
