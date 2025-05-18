@@ -437,24 +437,17 @@ if (contactForm) {
             submitButton.textContent = 'Sending...';
             submitButton.disabled = true;
             
-            const formData = new FormData(contactForm);
-            const response = await fetch('/', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: new URLSearchParams(formData).toString()
-            });
+            // Let the form submit naturally to Netlify
+            contactForm.submit();
             
-            if (response.ok) {
-                // Show success message
-                const successMessage = document.createElement('div');
-                successMessage.className = 'success-message';
-                successMessage.textContent = 'Thank you for your message! I will get back to you soon.';
-                contactForm.innerHTML = '';
-                contactForm.appendChild(successMessage);
-            } else {
-                throw new Error('Form submission failed');
-            }
+            // Show success message
+            const successMessage = document.createElement('div');
+            successMessage.className = 'success-message';
+            successMessage.textContent = 'Thank you for your message! I will get back to you soon.';
+            contactForm.innerHTML = '';
+            contactForm.appendChild(successMessage);
         } catch (error) {
+            console.error('Form submission error:', error);
             // Show error message
             const errorMessage = document.createElement('div');
             errorMessage.className = 'error-message';
