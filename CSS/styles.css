@@ -818,6 +818,19 @@ body {
         display: block;
     }
 
+    .nav {
+        padding: 1rem;
+    }
+
+    .logo img {
+        height: 30px;
+    }
+
+    .cursor-dot,
+    .cursor-outline {
+        display: none;
+    }
+
     .hero-title {
         font-size: 3rem;
     }
