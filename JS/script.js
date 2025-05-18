@@ -478,24 +478,22 @@ if (contactForm) {
     });
 }
 
-// Leaflet Map Initialization
-document.addEventListener('DOMContentLoaded', function() {
+// Initialize Leaflet Map
+document.addEventListener('DOMContentLoaded', () => {
     const mapElement = document.getElementById('map');
     if (mapElement) {
         // Initialize the map
-        const map = L.map('map').setView([51.2175, 4.4021], 15);
+        const map = L.map('map').setView([51.2175, 4.4021], 15); // Groenplaats coordinates
 
-        // Add the OpenStreetMap tiles
+        // Add OpenStreetMap tiles
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
             attribution: '© OpenStreetMap contributors'
         }).addTo(map);
 
-        // Add a marker for Groenplaats
+        // Add a marker at Groenplaats
         const marker = L.marker([51.2175, 4.4021]).addTo(map);
-        
-        // Add a popup to the marker
-        marker.bindPopup("<b>Groenplaats</b><br>2000 Antwerpen").openPopup();
+        marker.bindPopup("<b>Groenplaats</b><br>Antwerp, Belgium").openPopup();
 
         // Add a circle to highlight the area
         const circle = L.circle([51.2175, 4.4021], {
