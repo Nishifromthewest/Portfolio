@@ -1128,4 +1128,34 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* Map Container Styles */
+.map-container {
+    margin-top: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.map-container:hover {
+    transform: translateY(-5px);
+}
+
+.map-container iframe {
+    display: block;
+    width: 100%;
+    height: 300px;
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .map-container {
+        margin-top: 15px;
+    }
+    
+    .map-container iframe {
+        height: 250px;
+    }
 } 
