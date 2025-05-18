@@ -136,7 +136,7 @@ const projectData = {
         subtitle: 'Student Group Website',
         description: 'Creating a website for ASA Antwerp student group featuring a media gallery where members can download photos and videos from events. The site includes event information, member resources, and an easy-to-use media download system.',
         tech: ['HTML5', 'CSS3', 'JavaScript', 'PHP', 'MySQL'],
-        image: 'assets/ASA.jpg',
+        image: '/Assets/ASA.jpg',
         apis: [
             {
                 name: 'Media Library API',
@@ -160,7 +160,7 @@ const projectData = {
         subtitle: 'Sushi Restaurant Website',
         description: 'Revamping the Nani Antwerp sushi restaurant website with a modern design, online ordering system, and authentic Japanese dining experience showcase. Features include interactive menu, reservation system, and special sushi roll highlights.',
         tech: ['HTML5', 'CSS3', 'JavaScript', 'React', 'Node.js'],
-        image: 'assets/Nani.png',
+        image: '/Assets/Nani.png',
         apis: [
             {
                 name: 'Online Ordering',
@@ -184,7 +184,7 @@ const projectData = {
         subtitle: 'Point of Sale Development',
         description: 'Planning to develop a comprehensive Point of Sale system with inventory management, sales tracking, reporting features and easy customizability.',
         tech: ['React', 'Node.js', 'PostgreSQL', 'Express'],
-        image: 'assets/Portfolio_logo.png',
+        image: '/Assets/Portfolio_logo.png',
         apis: [
             {
                 name: 'Stripe API',
@@ -208,7 +208,7 @@ const projectData = {
         subtitle: 'Massage Tool Development',
         description: 'Developing a specialized massage tool to help relieve muscle tension and promote relaxation.Compact for portable carry, intensity control, and user-friendly interface.',
         tech: ['Python', 'Arduino', 'Raspberry Pi', 'IoT'],
-        image: 'assets/swedish-massage.jpg',
+        image: '/Assets/swedish-massage.jpg',
         apis: [
             {
                 name: 'Arduino API',
@@ -232,7 +232,7 @@ const projectData = {
         subtitle: 'Korean Restaurant Website',
         description: 'Creating a modern website for Jubang Korean Restaurant featuring an interactive menu, online reservations, and authentic Korean dining experience showcase. The site will highlight traditional dishes, special events, and cultural elements.',
         tech: ['HTML5', 'CSS3', 'JavaScript', 'React'],
-        image: 'assets/Jubang.jpg',
+        image: '/Assets/Jubang.jpg',
         apis: [
             {
                 name: 'Reservation System',
@@ -422,4 +422,47 @@ document.addEventListener('keydown', (e) => {
         aboutModal.classList.remove('active');
         document.body.style.overflow = '';
     }
-}); 
+});
+
+// Contact Form Handling
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const submitButton = contactForm.querySelector('.submit-button');
+        const originalButtonText = submitButton.textContent;
+        
+        try {
+            submitButton.textContent = 'Sending...';
+            submitButton.disabled = true;
+            
+            const formData = new FormData(contactForm);
+            const response = await fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams(formData).toString()
+            });
+            
+            if (response.ok) {
+                // Show success message
+                const successMessage = document.createElement('div');
+                successMessage.className = 'success-message';
+                successMessage.textContent = 'Thank you for your message! I will get back to you soon.';
+                contactForm.innerHTML = '';
+                contactForm.appendChild(successMessage);
+            } else {
+                throw new Error('Form submission failed');
+            }
+        } catch (error) {
+            // Show error message
+            const errorMessage = document.createElement('div');
+            errorMessage.className = 'error-message';
+            errorMessage.textContent = 'Sorry, there was an error sending your message. Please try again.';
+            contactForm.insertBefore(errorMessage, submitButton);
+            
+            submitButton.textContent = originalButtonText;
+            submitButton.disabled = false;
+        }
+    });
+} 

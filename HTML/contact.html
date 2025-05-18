@@ -44,7 +44,8 @@
         <div class="container">
             <h1 class="section-title">Let's start a project together</h1>
             <div class="contact-content">
-                <form class="contact-form" id="contactForm">
+                <form class="contact-form" id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="contact" />
                     <div class="form-group">
                         <label for="name">What's your name?</label>
                         <input type="text" id="name" name="name" required>
@@ -71,6 +72,9 @@
                     <div class="form-group">
                         <label for="message">Your message</label>
                         <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <div hidden>
+                        <input name="bot-field" />
                     </div>
                     <button type="submit" class="submit-button">Send Message</button>
                 </form>
