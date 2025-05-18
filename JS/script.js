@@ -444,19 +444,14 @@ if (contactForm) {
                 formData.append('form-name', 'contact');
             }
             
-            const response = await fetch('/', {
+            const response = await fetch('success.html', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                 body: new URLSearchParams(formData).toString()
             });
             
             if (response.ok) {
-                // Show success message
-                const successMessage = document.createElement('div');
-                successMessage.className = 'success-message';
-                successMessage.textContent = 'Thank you for your message! I will get back to you soon.';
-                contactForm.innerHTML = '';
-                contactForm.appendChild(successMessage);
+                window.location.href = 'success.html';
             } else {
                 throw new Error('Form submission failed');
             }
