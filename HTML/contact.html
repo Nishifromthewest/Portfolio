@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Portfolio</title>
+    <link rel="stylesheet" href="../CSS/reset.css">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="../Assets/Portfolio_logo.png" alt="Portfolio Logo">
+            </a>
+            <div class="nav-links">
+                <a href="work.html" class="nav-link">Work</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <button class="menu-button">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-content">
+            <a href="work.html" class="mobile-link">Work</a>
+            <a href="about.html" class="mobile-link">About</a>
+            <a href="contact.html" class="mobile-link">Contact</a>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <h1 class="section-title">Let's start a project together</h1>
+            <div class="contact-content">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">What's your name?</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">What's your email?</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="organization">What's the name of your organization?</label>
+                        <input type="text" id="organization" name="organization">
+                    </div>
+                    <div class="form-group">
+                        <label for="services">What services are you looking for?</label>
+                        <select id="services" name="services" required>
+                            <option value="">Select a service</option>
+                            <option value="web-development">Web Development</option>
+                            <option value="web-design">Web Design</option>
+                            <option value="ui-ux">UI/UX Design</option>
+                            <option value="consulting">Consulting</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+
+                <div class="contact-info">
+                    <div class="info-section">
+                        <h2>Contact Details</h2>
+                        <ul class="contact-list">
+                            <li>
+                                <a href="mailto:nischal.chitrakar@student.ap.be">nischal.chitrakar@student.ap.be</a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/nischal-chitrakar-3836b1297/" target="_blank">LinkedIn</a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/Nishifromthewest" target="_blank">GitHub</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="info-section">
+                        <h2>Socials</h2>
+                        <ul class="social-list">
+                            <li><a href="https://www.instagram.com/nischalchitrakar/" target="_blank" class="social-link">Instagram</a></li>
+                            <li><a href="https://github.com/Nishifromthewest" target="_blank" class="social-link">GitHub</a></li>
+                            <li><a href="https://www.linkedin.com/in/nischal-chitrakar-3836b1297/" target="_blank" class="social-link">LinkedIn</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="info-section">
+                        <h2>Location</h2>
+                        <p>Antwerp, Belgium</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="social-links">
+                <a href="https://www.instagram.com/nischalchitrakar/" target="_blank" class="social-link">Instagram</a>
+                <a href="https://github.com/Nishifromthewest" target="_blank" class="social-link">GitHub</a>
+                <a href="https://www.linkedin.com/in/nischal-chitrakar-3836b1297/" target="_blank" class="social-link">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <script src="../JS/script.js"></script>
+</body>
+</html> 

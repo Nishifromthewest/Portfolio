@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work - Portfolio</title>
+    <link rel="stylesheet" href="../CSS/reset.css">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="../Assets/Portfolio_logo.png" alt="Portfolio Logo">
+            </a>
+            <div class="nav-links">
+                <a href="work.html" class="nav-link">Work</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <button class="menu-button">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-content">
+            <a href="work.html" class="mobile-link">Work</a>
+            <a href="about.html" class="mobile-link">About</a>
+            <a href="contact.html" class="mobile-link">Contact</a>
+        </div>
+    </div>
+
+    <!-- Work Section -->
+    <section class="work-section">
+        <div class="container">
+            <h2 class="section-title">My Work</h2>
+            
+            <!-- In Progress Projects -->
+            <div class="work-category">
+                <h3 class="category-title">Currently Working On</h3>
+                <div class="work-grid">
+                    <div class="work-item" data-project="asa-antwerp">
+                        <div class="work-image" style="background-image: url('../Assets/ASA.jpg')"></div>
+                        <div class="work-content">
+                            <h3>ASA Antwerp Website</h3>
+                            <p>Web Development & Design</p>
+                            <span class="status-badge in-progress">In Progress</span>
+                        </div>
+                    </div>
+                    <div class="work-item" data-project="nani-antwerp-revamp">
+                        <div class="work-image" style="background-image: url('../Assets/Nani.png')"></div>
+                        <div class="work-content">
+                            <h3>Nani Antwerp Website Revamp</h3>
+                            <p>Website Redesign & Development</p>
+                            <span class="status-badge in-progress">In Progress</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Future Ideas -->
+            <div class="work-category">
+                <h3 class="category-title">Future Plans</h3>
+                <div class="work-grid">
+                    <div class="work-item" data-project="pos-system">
+                        <div class="work-image" style="background-image: url('../Assets/Portfolio_logo.png')"></div>
+                        <div class="work-content">
+                            <h3>POS System</h3>
+                            <p>Point of Sale Development</p>
+                            <span class="status-badge future">Future</span>
+                        </div>
+                    </div>
+                    <div class="work-item" data-project="sage-project">
+                        <div class="work-image" style="background-image: url('../Assets/swedish-massage.jpg')"></div>
+                        <div class="work-content">
+                            <h3>Relieving Sage Project</h3>
+                            <p>System Integration</p>
+                            <span class="status-badge future">Future</span>
+                        </div>
+                    </div>
+                    <div class="work-item" data-project="website-jubang">
+                        <div class="work-image" style="background-image: url('../Assets/Jubang.jpg')"></div>
+                        <div class="work-content">
+                            <h3>Website Jubang</h3>
+                            <p>Web Development & Design</p>
+                            <span class="status-badge future">Future</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Completed Projects -->
+            <div class="work-category">
+                <h3 class="category-title">Completed</h3>
+                <div class="work-grid">
+                    <div class="work-item" data-project="portfolio">
+                        <div class="work-image" style="background-image: url('../Assets/Portfolio_logo.png')"></div>
+                        <div class="work-content">
+                            <h3>My Portfolio</h3>
+                            <p>Personal Portfolio Website</p>
+                            <span class="status-badge completed">Completed</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        
+        </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div class="project-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-body">
+                <!-- Portfolio Project Content -->
+                <div class="project-content" id="portfolio-content">
+                    <h2>My Portfolio</h2>
+                    <p class="subtitle">Personal Portfolio Website</p>
+                    <div class="work-image" style="background-image: url('../Assets/Portfolio_logo.png')"></div>
+                    <p class="description">
+                        A modern, responsive portfolio website showcasing my work, skills, and experience. Built with a focus on clean design and smooth user interactions.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Responsive Design</span>
+                    </div>
+                    <div class="api-section">
+                        <h3>API Integrations</h3>
+                        <div class="api-list">
+                            <div class="api-item">
+                                <h4>Google Fonts API</h4>
+                                <p>Implemented the Inter font family for consistent typography across the website. Used through Google Fonts CDN for optimal performance and loading.</p>
+                                <a href="https://fonts.google.com/specimen/Inter" target="_blank" class="api-link">View API →</a>
+                            </div>
+                            <div class="api-item">
+                                <h4>GitHub Copilot</h4>
+                                <p>Leveraged AI-powered code completion for efficient development. Used for code suggestions, documentation, and best practices implementation.</p>
+                                <a href="https://github.com/features/copilot" target="_blank" class="api-link">Learn More →</a>
+                            </div>
+                            <div class="api-item">
+                                <h4>ChatGPT</h4>
+                                <p>Utilized for code optimization, debugging, and implementing complex features. Assisted in creating responsive layouts and interactive elements.</p>
+                                <a href="https://chat.openai.com" target="_blank" class="api-link">Learn More →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="social-links">
+                <a href="https://www.instagram.com/nischalchitrakar/" target="_blank" class="social-link">Instagram</a>
+                <a href="https://github.com/Nishifromthewest" target="_blank" class="social-link">GitHub</a>
+                <a href="https://www.linkedin.com/in/nischal-chitrakar-3836b1297/" target="_blank" class="social-link">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <script src="../JS/script.js"></script>
+</body>
+</html> 
