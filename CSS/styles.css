@@ -735,6 +735,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .social-links {
@@ -750,6 +752,27 @@ body {
 
 .social-link:hover {
     transform: translateY(-5px);
+}
+
+.copyright {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.copyright p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .social-links {
+        margin-bottom: 1rem;
+    }
 }
 
 /* Custom Cursor */
