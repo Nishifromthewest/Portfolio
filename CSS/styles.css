@@ -1100,24 +1100,23 @@ body {
 }
 
 /* Form Messages */
+.success-message,
+.error-message {
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
 .success-message {
     background-color: #4CAF50;
     color: white;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    margin: 20px 0;
-    animation: fadeIn 0.5s ease-in-out;
 }
 
 .error-message {
     background-color: #f44336;
     color: white;
-    padding: 15px;
-    border-radius: 8px;
-    text-align: center;
-    margin: 10px 0;
-    animation: fadeIn 0.5s ease-in-out;
 }
 
 @keyframes fadeIn {
